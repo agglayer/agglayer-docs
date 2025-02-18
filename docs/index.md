@@ -2,7 +2,7 @@
 hide:
   - toc
 ---
-<!-- TEST -->
+
 <style>
    .md-content h1:first-of-type {
       display: none;
@@ -28,15 +28,15 @@ hide:
 
 <div class="grid-container">
    <div class="grid-item">
-    <a href="/agglayer/architecture/overview/">
+    <a href="/agglayer/core-concepts/architecture/">
         <div class="product-list-item-header">
-            <div class="feature-card-heading">Agglayer Architecture</div>
+            <div class="feature-card-heading">Architecture</div>
         </div>
         <p class="feature-paragraph">A high-level overview of the Agglayer’s components and their functions</p>
     </a>
 </div>
 <div class="grid-item">
-    <a href="/agglayer/crosschain-interop/crosschain-interop/">
+    <a href="/agglayer/how-to/transfer-and-call">
         <div class="product-list-item-header">
             <div class="feature-card-heading">Cross-chain Interop</div>
         </div>
@@ -44,7 +44,7 @@ hide:
     </a>
 </div>
 <div class="grid-item">
-    <a href="/agglayer/architecture/pessimistic-proof/">
+    <a href="/agglayer/core-concepts/pessimistic-proof/">
         <div class="product-list-item-header">
             <div class="feature-card-heading">Pessimistic Proof</div>
         </div>

@@ -1,10 +1,10 @@
 site_name: Agglayer Documentation
 site_author: Polygon Labs
 copyright: Copyright &copy; 2025 Polygon Labs
-repo_name: Polygon Knowledge Layer
-repo_url: https://github.com/0xPolygon/polygon-docs
+repo_name: Agglayer Documentation
+repo_url: https://github.com/agglayer/agglayer-docs
 edit_uri: edit/main/docs/
-site_url: https://docs.polygon.technology/
+site_url: https://agglayer.dev/
 
 theme:
   name: material
@@ -53,7 +53,7 @@ nav:
   - Agglayer: 
       - Overview: index.md
       - Get Started:
-          - Bridge assets onto Agglayer: agglayer/get-started/bridge-assets.md
+          -  Set up your environment for Agglayer: agglayer/get-started/bridge-assets.md
       - How To:
           - Transfer any asset across Agglayer-connected chains: agglayer/how-to/transfer-asset.md
           - Call a contract from any Agglayer-connected chain: agglayer/how-to/call-contract.md
@@ -73,9 +73,9 @@ extra:
     - icon: fontawesome/solid/circle-question
       link: https://support.polygon.technology/support/solutions
     - icon: fontawesome/solid/globe
-      link: https://polygon.technology/
+      link: https://agglayer.dev/
     - icon: fontawesome/brands/github
-      link: https://github.com/0xPolygon/polygon-docs
+      link: https://github.com/agglayer/agglayer-docs
   consent:
     title: Cookie consent
     description: >-

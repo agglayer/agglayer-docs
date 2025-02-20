@@ -1,0 +1,9 @@
+region: eu-west-1
+hostport: 3000
+containerport: 3000
+role: frontend-application
+environment: dev
+iac: terraform-workspace-aws-dev-apps-eu-west-1-apps-agglayer-docs
+team_name: documentation
+memory: 1024
+cpu: 512

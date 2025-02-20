@@ -25,11 +25,11 @@ jobs:
             if [ "${{ inputs.environment }}" == "dev" ]; then
                 echo "ACCOUNT_NUMBER=058264511034" >> $GITHUB_OUTPUT
                 echo "APP_NAME=${{ inputs.core_app }}-dev" >> $GITHUB_OUTPUT
-                echo "CLUSTER_NAME=backend-dev-ecs-cluster" >> $GITHUB_OUTPUT
+                echo "CLUSTER_NAME=frontend-dev-ecs-cluster" >> $GITHUB_OUTPUT
             elif [ "${{ inputs.environment }}" == "prod" ]; then
                 echo "ACCOUNT_NUMBER=042947190491" >> $GITHUB_OUTPUT
                 echo "APP_NAME=${{ inputs.core_app }}" >> $GITHUB_OUTPUT
-                echo "CLUSTER_NAME=backend-apis-ecs-cluster" >> $GITHUB_OUTPUT
+                echo "CLUSTER_NAME=frontend-prod-ecs-cluster" >> $GITHUB_OUTPUT
             fi
         
   deploy:

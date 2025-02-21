@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+mkdocs-material = "==9.4.8"
+markdown-include = "==0.8.1"
+mkdocs-open-in-new-tab = "==1.0.3"
+mkdocs-multirepo-plugin = "==0.7.0"
+mkdocs-redirects = "==1.2.1"
+mkdocs-mermaid2-plugin = "==1.1.1"
+
+[dev-packages]
+
+[requires]
+python_version = "3.13"

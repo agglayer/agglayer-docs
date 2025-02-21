@@ -1,22 +1,17 @@
-FROM python:3.9-alpine as builder
-
-# Install system dependencies
+# --- Build Stage ---
+FROM python:3.13-alpine AS builder
 RUN apk update && \
-    apk add --no-cache rsync git nodejs npm bash
-
-# Create a non-root user and group
-RUN addgroup -S mkdocs && \
-    adduser -S -G mkdocs mkdocs
+    apk add --no-cache rsync git nodejs npm bash curl gcc musl-dev python3-dev libffi-dev openssl-dev
+RUN pip install --no-cache-dir pipenv
 WORKDIR /app
-COPY requirements.txt .
-RUN pip install -r requirements.txt --no-cache-dir
-COPY . /app
-RUN chown -R mkdocs:mkdocs /app
-USER mkdocs
-RUN mkdocs build
+COPY Pipfile Pipfile.lock ./
+RUN pipenv install --deploy --ignore-pipfile
+COPY . .
+RUN pipenv run mkdocs build
 
-# Use a multi-stage build to reduce image size
+# --- Nginx Stage ---
 FROM nginx:alpine
-COPY --from=builder /app/site /usr/share/nginx/html
+COPY --from=builder /app/site/ /usr/share/nginx/html/
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 3000
 CMD ["nginx", "-g", "daemon off;"]

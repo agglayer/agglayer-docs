@@ -8,7 +8,7 @@ In this guide you will: <br>
 - Use the claim API to claim the transaction on the destination chain.
 ---
 
-## Step 1: Set Up Your Environment (Prerequisites)
+## Step 1: Set up your Environment (Prerequisites)
 
 Before you begin, ensure that you have the following:
 
@@ -22,9 +22,9 @@ Before you begin, ensure that you have the following:
 
 ---
 
-## Step 2: Configure Your Environment
+## Step 2: Configure your Environment
 
-### 2.1 Update Your `config.js` File
+### 2.1 Update your `config.js` File
 
 Make sure your `config.js` contains the correct network settings, RPC endpoints, bridge contract addresses, and account details. (See the [AggLayer Unified Bridge repository](https://github.com/BrianSeong99/AggLayer_UnifiedBridge) for a sample configuration.)
 

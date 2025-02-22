@@ -1,4 +1,4 @@
-# How to Transfer an Asset and Call a Contract from Agglayer-Connected Chains
+# Transfer any asset and call any contract from Agglayer-connected chains
 
 This tutorial demonstrates how to perform a combined operation that bridges an asset and calls a contract across Agglayer-connected chains using **lxly.js**. In this example, you will:
 
@@ -17,7 +17,7 @@ Make sure you have Node.js installed and your project set up with the necessary 
 
 ---
 
-## Step 1. Deploy the Smart Contract
+## Step 1: Deploy the Smart Contract
 
 Create a Solidity file named `AssetAndCallReceiver.sol` with the following code. This contract contains the `processTransferAndCall` function which receives ETH (ensuring that the sent value matches the specified asset amount) and updates its state accordingly.
 
@@ -50,13 +50,13 @@ contract AssetAndCallReceiver {
     }
 }
 ```
-# Deployment
 
+### 1.1 Deploy your contract
 Deploy the `AssetAndCallReceiver` contract on your destination chain (Sepolia). Make a note of the deployed contract’s address; you will need it in Step 2.
 
 ---
 
-## Step 2. Bridge an Asset and Call the Contract
+## Step 2: Bridge an Asset and Call the Contract
 
 Create a JavaScript file named `bridge_and_call_asset.js`. This script uses **lxly.js** to bridge an asset (for example, 0.01 ETH) from the source chain (Cardona) to the destination chain (Sepolia) while simultaneously calling the `processTransferAndCall` function on the deployed contract.
 
@@ -144,7 +144,7 @@ execute()
     });
 ```
 
-## Step 3. Claim the Bridged Asset and Message
+## Step 3: Claim the Bridged Asset and Message
 
 After the bridging operation is complete and the global exit root is updated on the destination chain, you need to claim the bridged asset and the associated contract call message.
 Create a JavaScript file named claim_asset_and_message.js with the following code:
@@ -228,3 +228,5 @@ In this tutorial, you learned how to combine asset transfer and contract invocat
 3. **Claiming the bridged asset and message** on the destination chain using `claimAsset` and `claimMessage`.
 
 This integrated approach allows you to move assets and trigger contract functionality seamlessly between different networks.
+
+

@@ -1,6 +1,4 @@
-# BridgeAndCall-Quickstart-guide
-
-# How to Call Any Contract on the Agglayer Using lxly.js
+# Call a contract from any Agglayer-connected chain
 
 This guide shows you how to bridge a contract call from one Layer 2 (L2) network (Cardona) to another (Silicon Sepolia) using the **lxly.js** library. We will cover:
 
@@ -28,7 +26,7 @@ The agglayer bridging solution allows you to invoke a contract on a destination 
 ---
 
 
-## Step 1 – Deploy the Contract on the Destination Network
+## Step 1: Deploy the Contract on the Destination Network
 
 Create a simple contract named `Counter.sol`:
 
@@ -45,11 +43,12 @@ contract Counter {
 }
 ```
 
-## Step 2 - Bridge and Call Script
+## Step 2: Bridge and Call Script
 
 Create a file named `bridge_and_call.js` with the following code:
 
 ```javascript
+
 const { getLxLyClient, tokens, configuration, from } = require('./utils/utils_lxly');
 const { CounterABI } = require("../../ABIs/Counter");
 
@@ -129,7 +128,7 @@ execute()
     });
 ```
 
-### Run command -
+Run command
 ```bash
 node bridge_and_call.js
 ```
@@ -143,11 +142,12 @@ node bridge_and_call.js
 - **Bridge Operation:**  
   The `bridgeAndCall` function is called on the client's bridge extension to execute a contract call on the destination chain after bridging.
 
-## Step 3 -  Claim Asset and Claim Message on the Destination L2
+## Step 3: Claim Asset and Claim Message on the Destination L2
 
 Once the Global Exit Root is updated on Silicon Sepolia, claim both the asset (if any) and the message that triggered the contract call.
 Create a file named claim_bridge_and_call.js with the following code:
-```javascript const { getLxLyClient, tokens, configuration, from, to } = require('./utils/utils_lxly');
+```javascript 
+const { getLxLyClient, tokens, configuration, from, to } = require('./utils/utils_lxly');
 
 const execute = async () => {
     // Initialize the client.
@@ -214,7 +214,7 @@ execute()
     });
 ```
 
-Run command :
+Run command:
 ```bash
 node claim_bridge_and_call.js
 ```

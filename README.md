@@ -1,16 +1,9 @@
-# Polygon Knowledge Layer
+# Agglayer Documentation
 
-Welcome to the Polygon Knowledge Layer!!!
+Welcome to the Agglayer Documentation!
 
-These docs use [the Material theme for MkDocs](https://squidfunk.github.io/mkdocs-material/). Our goal is to establish a high-quality, curated, and comprehensive "source of truth" for Polygon's technology. 
+These docs use [the Material theme for MkDocs](https://squidfunk.github.io/mkdocs-material/). Our goal is to establish a high-quality, curated, and comprehensive "source of truth" for the Agglayer. 
 
-This includes sections on:
-
-- Polygon CDK
-- Polygon zkEVM
-- Polygon PoS
-- Polygon Miden
-- Developer tools 
 
 ## Run locally
 
@@ -54,13 +47,13 @@ docker compose up
 
 ### Creating a pull request
 
-1. **Pull request**: Once your changes are complete, create a pull request against the main branch of Polygon Knowledge Layer.
+1. **Pull request**: Once your changes are complete, create a pull request against the main branch of the Agglayer Documentation.
 2. **Review process**: Your pull request will be reviewed by the maintainers. They may request changes or clarifications.
 3. **Responsibility**: Contributors are expected to maintain their contributions over time and update them as necessary to ensure continued accuracy and relevance.
 
 ### Best practices
 
-- **Stay informed**: Keep up-to-date with the latest developments in Polygon technologies.
+- **Stay informed**: Keep up-to-date with the latest developments with the Agglayer.
 - **Engage with the community**: Participate in discussions and provide feedback on other contributions.
 - **Stay consistent**: Ensure your contributions are coherent with the rest of the documentation and do not overlap or contradict existing content.
 

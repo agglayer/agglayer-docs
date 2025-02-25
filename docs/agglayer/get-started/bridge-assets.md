@@ -8,7 +8,8 @@ In this guide you will: <br>
 - Use the claim API to claim the transaction on the destination chain.
 
 ---
-
+Refer to this repository for complete code - [Link](https://github.com/BrianSeong99/Agglayer_UnifiedBridge/tree/main/scripts/src)
+---
 ## Step 1: Set up your Environment (Prerequisites)
 
 Before you begin, ensure that you have the following:
@@ -23,15 +24,15 @@ Before you begin, ensure that you have the following:
 
 ---
 
-## Step 2: Configure your Environment
+## Step 2: Configure Your Environment
 
-### 2.1 Update your `config.js` File
+### 2.1 Update Your `config.js` File
 
-Make sure your `config.js` contains the correct network settings, RPC endpoints, bridge contract addresses, and account details. (See the [Agglayer Unified Bridge repository](https://github.com/BrianSeong99/AggLayer_UnifiedBridge) for a sample configuration.)
+Make sure your `config.js` contains the correct network settings, RPC endpoints, bridge contract addresses, and account details. (See the [Agglayer Unified Bridge repository](https://github.com/BrianSeong99/Agglayer_UnifiedBridge/blob/main/scripts/config.js) for a sample configuration). The reference `config.js` contains public RPCs as a placeholder, but it is recommended to get private RPCs for best results.
 
 ### 2.2 Set Up the Utility File: `utils_lxly.js`
 
-This file initializes your connection with the Unified Bridge using lxly.js. It configures network providers (using HDWalletProvider or similar) for both the source and destination networks.
+This file initializes your connection with the Unified Bridge using lxly.js. It configures network providers (using HDWalletProvider or similar) for both the source and destination networks. Reference file - [utils_lxly.js](https://github.com/BrianSeong99/Agglayer_UnifiedBridge/blob/main/scripts/src/utils/utils_lxly.js)
 
 #### Example: `utils_lxly.js`
 ```javascript

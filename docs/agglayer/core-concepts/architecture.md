@@ -1,4 +1,4 @@
-![Agglayer Architecture Diagram](../../img/arch.png)
+![Agglayer Architecture](https://github.com/user-attachments/assets/5c6369dc-e14b-4871-9648-2d40df6a57c6)
 
 ## Overview
 

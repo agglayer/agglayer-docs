@@ -1,4 +1,4 @@
-![Agglayer Architecture](../../img/arch.png)
+![Agglayer Architecture](../../img/architecture.png)
 
 ## Overview
 

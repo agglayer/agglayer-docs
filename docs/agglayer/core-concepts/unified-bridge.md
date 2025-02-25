@@ -1,5 +1,4 @@
 # Unified Bridge
-
 ## Overview
 The unified bridge (prev. LxLy bridge) is the common access point for chains connected to the Agglayer. Along with the pessimistic proof, it is one of two core components of the Agglayer.
 

@@ -53,16 +53,16 @@ nav:
   - Agglayer: 
       - Overview: index.md
       - Get Started:
-          -  Set up your environment for Agglayer: agglayer/get-started/bridge-assets.md
+          -  Set up your environment: agglayer/get-started/bridge-assets.md
       - How To:
-          - Transfer any asset across Agglayer-connected chains: agglayer/how-to/transfer-asset.md
-          - Call a contract from any Agglayer-connected chain: agglayer/how-to/call-contract.md
-          - Transfer any asset and call any contract from Agglayer-connected chains: agglayer/how-to/transfer-and-call.md
+          - Move ERC-20 tokens across chains: agglayer/how-to/transfer-asset.md
+          - Send messages across chains: agglayer/how-to/call-contract.md
+          - Move ERC-20 tokens and send messages across chains: agglayer/how-to/transfer-and-call.md
       - Core Concepts:
           - Architecture: agglayer/core-concepts/architecture.md
           - Unified Bridge: agglayer/core-concepts/unified-bridge.md
           - Pessimistic Proof: agglayer/core-concepts/pessimistic-proof.md
-          - Multi-stack Interop: agglayer/core-concepts/connecting-chains.md
+          # - Multi-stack Interop: agglayer/core-concepts/connecting-chains.md
 
 extra:
   generator: false

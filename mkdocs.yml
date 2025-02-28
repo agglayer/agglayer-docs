@@ -55,7 +55,7 @@ nav:
       - Get Started:
           -  Set up your environment: agglayer/get-started/bridge-assets.md
       - How To:
-          - Bridge an ERC-20 token cross-chain: agglayer/how-to/transfer-asset.md
+          - Bridge an ERC-20 token: agglayer/how-to/transfer-asset.md
           - Call a smart contract cross-chain: agglayer/how-to/call-contract.md
           - Bridge-and-call in one step: agglayer/how-to/transfer-and-call.md
       - Core Concepts:

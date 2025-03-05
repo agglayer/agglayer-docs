@@ -8,7 +8,7 @@ In this guide you will: <br>
 - Use the claim API to claim the transaction on the destination chain.
 
 ---
-Refer to this repository for complete code - [Link](docs/src)
+Refer to this repository for complete code - [Link](/Users/agada/agglayer1/docs/src)
 ---
 ## Step 1: Set up your Environment (Prerequisites)
 

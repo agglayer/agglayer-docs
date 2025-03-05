@@ -8,7 +8,7 @@ In this guide you will: <br>
 - Use the claim API to claim the transaction on the destination chain.
 
 ---
-Refer to this repository for complete code - [Link](/Users/agada/agglayer1/docs/src)
+Refer to this repository for complete code - [Link](../src)
 ---
 ## Step 1: Set up your Environment (Prerequisites)
 
@@ -28,7 +28,7 @@ Before you begin, ensure that you have the following:
 
 ### 2.1 Update Your `config.js` File
 
-Make sure your `config.js` contains the correct network settings, RPC endpoints, bridge contract addresses, and account details. (See the [Template File](docs/src/config.js) for a sample configuration). The reference `config.js` contains public RPCs as a placeholder, but it is recommended to get private RPCs for best results.
+Make sure your `config.js` contains the correct network settings, RPC endpoints, bridge contract addresses, and account details. (See the [Template File](../src/config.js) for a sample configuration). The reference `config.js` contains public RPCs as a placeholder, but it is recommended to get private RPCs for best results.
 
 ### 2.2 Set Up the Utility File: `utils_lxly.js`
 

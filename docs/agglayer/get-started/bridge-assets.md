@@ -32,7 +32,7 @@ Make sure your `config.js` contains the correct network settings, RPC endpoints,
 
 ### 2.2 Set Up the Utility File: `utils_lxly.js`
 
-This file initializes your connection with the Unified Bridge using lxly.js. It configures network providers (using HDWalletProvider or similar) for both the source and destination networks. Reference file - [utils_lxly.js](https://github.com/BrianSeong99/Agglayer_UnifiedBridge/blob/main/scripts/src/utils/utils_lxly.js)
+This file initializes your connection with the Unified Bridge using lxly.js. It configures network providers (using HDWalletProvider or similar) for both the source and destination networks. Reference file - [utils_lxly.js](../src/utils/utils_lxly.js)
 
 #### Example: `utils_lxly.js`
 ```javascript

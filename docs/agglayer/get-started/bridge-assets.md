@@ -7,8 +7,20 @@ In this guide you will: <br>
 - Check its status using the Bridge API <br>
 - Use the claim API to claim the transaction on the destination chain.
 
+## 📖 Table of Contents
+- [Set up your Environment (Prerequisites)](#step-1-set-up-your-environment-prerequisites)
+- [Configure Your Environment](#step-2-configure-your-environment)
+  - [Update Your `config.js` File](#21-update-your-configjs-file)
+  - [Set Up the Utility File: `utils_lxly.js`](#22-set-up-the-utility-file-utilslxlyjs)
+- [Bridge the Asset (`bridge_asset.js`)](#step-3-bridge-the-asset-bridge_assetjs)
+- [Check Transaction Status via the Transaction API](#step-4-check-transaction-status-via-the-transaction-api)
+- [Understand Transaction States](#step-5-understand-transaction-states)
+- [Claim the Bridged Asset (`claim_asset.js`)](#step-6-claim-the-bridged-asset-claim_assetjs)
+- [Confirm the Final Transaction Status](#step-7-confirm-the-final-transaction-status)
+
+
 ---
-Refer to this repository for complete code - [Link](https://github.com/BrianSeong99/Agglayer_UnifiedBridge/tree/main/scripts/src)
+Refer to this repository for complete code - [Link](../src)
 ---
 ## Step 1: Set up your Environment (Prerequisites)
 
@@ -28,11 +40,11 @@ Before you begin, ensure that you have the following:
 
 ### 2.1 Update Your `config.js` File
 
-Make sure your `config.js` contains the correct network settings, RPC endpoints, bridge contract addresses, and account details. (See the [Agglayer Unified Bridge repository](https://github.com/BrianSeong99/Agglayer_UnifiedBridge/blob/main/scripts/config.js) for a sample configuration). The reference `config.js` contains public RPCs as a placeholder, but it is recommended to get private RPCs for best results.
+Make sure your `config.js` contains the correct network settings, RPC endpoints, bridge contract addresses, and account details. (See the [Template File](../src/config.js) for a sample configuration). The reference `config.js` contains public RPCs as a placeholder, but it is recommended to get private RPCs for best results.
 
 ### 2.2 Set Up the Utility File: `utils_lxly.js`
 
-This file initializes your connection with the Unified Bridge using lxly.js. It configures network providers (using HDWalletProvider or similar) for both the source and destination networks. Reference file - [utils_lxly.js](https://github.com/BrianSeong99/Agglayer_UnifiedBridge/blob/main/scripts/src/utils/utils_lxly.js)
+This file initializes your connection with the Unified Bridge using lxly.js. It configures network providers (using HDWalletProvider or similar) for both the source and destination networks. Reference file - [utils_lxly.js](../src/utils/utils_lxly.js)
 
 #### Example: `utils_lxly.js`
 ```javascript
@@ -139,24 +151,26 @@ Before proceeding with claiming the asset, you need to verify its current status
 
 Using Postman, import the API endpoint to check the status of your transaction. This query will return details such as the token bridged, the amount, and the current state of the transaction. Remember to get your API Key via this [link](https://polygontechnology.notion.site/api-gateway-service-documentation).
 
+![Bridged Asset](bridged.png)
+
 ## Step 5: Understand Transaction States
 
 After querying the Bridge API, you will receive information on the transaction states. The key states are:
 
-- **BRIDGED:**  
-  The transaction has been initiated on the source chain (Sepolia) via the `bridgeAsset` API.
-
-- **READY_TO_CLAIM:**  
-  The asset is now available on the destination chain (zkEVM / AggLayer) and is awaiting claim.
-
-- **CLAIMED:**  
-  The asset has been successfully claimed on the destination chain after using the `claimAsset` API.
+| **Status**          | **Description** |
+|---------------------|---------------------------------------------------------------|
+| **BRIDGED**        | Transaction initiated on Sepolia via `bridgeAsset` API. |
+| **READY_TO_CLAIM** | Asset available on zkEVM/AggLayer, awaiting claim. |
+| **CLAIMED**        | Asset successfully claimed via `claimAsset` API. |
 
 These states are verified by querying the API (for example, via Postman).
 
 ## Step 6: Claim the Bridged Asset (`claim_asset.js`)
 
 Once the Bridge API shows that the asset is **READY_TO_CLAIM**, you can claim it on the destination chain using the claim API.
+
+![Ready_to_claim Asset](ready_to_claim.png)
+
 
 ### What Happens:
 - **CLAIMED State:**  

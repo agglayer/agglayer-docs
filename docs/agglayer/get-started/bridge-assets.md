@@ -146,10 +146,10 @@ Using Postman, import the API endpoint to check the status of your transaction. 
 After querying the Bridge API, you will receive information on the transaction states. The key states are:
 
 | **Status**          | **Description** |
-|---------------------|----------------------------------------------------------------|
-| **BRIDGED**        | The transaction has been initiated on the source chain (Sepolia) via the `bridgeAsset` API. |
-| **READY_TO_CLAIM** | The asset is now available on the destination chain (zkEVM / AggLayer) and is awaiting claim. |
-| **CLAIMED**        | The asset has been successfully claimed on the destination chain after using the `claimAsset` API. |
+|---------------------|---------------------------------------------------------------|
+| **BRIDGED**        | Transaction initiated on Sepolia via `bridgeAsset` API. |
+| **READY_TO_CLAIM** | Asset available on zkEVM/AggLayer, awaiting claim. |
+| **CLAIMED**        | Asset successfully claimed via `claimAsset` API. |
 
 These states are verified by querying the API (for example, via Postman).
 

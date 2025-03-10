@@ -139,6 +139,8 @@ Before proceeding with claiming the asset, you need to verify its current status
 
 Using Postman, import the API endpoint to check the status of your transaction. This query will return details such as the token bridged, the amount, and the current state of the transaction. Remember to get your API Key via this [link](https://polygontechnology.notion.site/api-gateway-service-documentation).
 
+![Bridged Asset](bridged.png)
+
 ## Step 5: Understand Transaction States
 
 After querying the Bridge API, you will receive information on the transaction states. The key states are:

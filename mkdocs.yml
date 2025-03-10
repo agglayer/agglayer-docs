@@ -63,6 +63,8 @@ nav:
           - Unified Bridge: agglayer/core-concepts/unified-bridge.md
           - Pessimistic Proof: agglayer/core-concepts/pessimistic-proof.md
           # - Multi-stack Interop: agglayer/core-concepts/connecting-chains.md
+      - Additional Resources:
+          - Connected Chains: agglayer/add-res/connected-chains.md
 
 extra:
   generator: false

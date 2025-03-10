@@ -8,15 +8,15 @@ In this guide you will: <br>
 - Use the claim API to claim the transaction on the destination chain.
 
 ## 📖 Table of Contents
-- [Step 1: Set up your Environment (Prerequisites)](#step-1-set-up-your-environment-prerequisites)
-- [Step 2: Configure Your Environment](#step-2-configure-your-environment)
-  - [2.1 Update Your `config.js` File](#21-update-your-configjs-file)
-  - [2.2 Set Up the Utility File: `utils_lxly.js`](#22-set-up-the-utility-file-utilslxlyjs)
-- [Step 3: Bridge the Asset (`bridge_asset.js`)](#step-3-bridge-the-asset-bridge_assetjs)
-- [Step 4: Check Transaction Status via the Transaction API](#step-4-check-transaction-status-via-the-transaction-api)
-- [Step 5: Understand Transaction States](#step-5-understand-transaction-states)
-- [Step 6: Claim the Bridged Asset (`claim_asset.js`)](#step-6-claim-the-bridged-asset-claim_assetjs)
-- [Step 7: Confirm the Final Transaction Status](#step-7-confirm-the-final-transaction-status)
+- [Set up your Environment (Prerequisites)](#step-1-set-up-your-environment-prerequisites)
+- [Configure Your Environment](#step-2-configure-your-environment)
+  - [Update Your `config.js` File](#21-update-your-configjs-file)
+  - [Set Up the Utility File: `utils_lxly.js`](#22-set-up-the-utility-file-utilslxlyjs)
+- [Bridge the Asset (`bridge_asset.js`)](#step-3-bridge-the-asset-bridge_assetjs)
+- [Check Transaction Status via the Transaction API](#step-4-check-transaction-status-via-the-transaction-api)
+- [Understand Transaction States](#step-5-understand-transaction-states)
+- [Claim the Bridged Asset (`claim_asset.js`)](#step-6-claim-the-bridged-asset-claim_assetjs)
+- [Confirm the Final Transaction Status](#step-7-confirm-the-final-transaction-status)
 
 
 ---

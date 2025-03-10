@@ -163,7 +163,6 @@ Once the Bridge API shows that the asset is **READY_TO_CLAIM**, you can claim it
 ![Ready_to_claim Asset](ready_to_claim.png)
 
 
-
 ### What Happens:
 - **CLAIMED State:**  
   The asset moves from a pending state to claimed after executing the claim.

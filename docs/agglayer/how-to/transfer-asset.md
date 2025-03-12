@@ -26,7 +26,7 @@ Before you begin, ensure that you have the following:
 
 ### 2.1 Update your `config.js` File
 
-Make sure your `config.js` contains the correct network settings, RPC endpoints, bridge contract addresses, and account details. (See the [AggLayer Unified Bridge repository](https://github.com/BrianSeong99/AggLayer_UnifiedBridge) for a sample configuration.)
+Make sure your `config.js` contains the correct network settings, RPC endpoints, bridge contract addresses, and account details. (See the [Template File](../src/config.js)  for a sample configuration.)
 
 ### 2.2 Set Up the Utility File: `utils_lxly.js`
 

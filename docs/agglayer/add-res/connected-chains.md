@@ -1,6 +1,6 @@
 # Chains connected to AggLayer
 
-Here's a list of chains connected to the alpha version of the AggLayer:
+Here's a list of chains connected to the alpha version of the Agglayer:
 
 | Chain partner           | Chain ID  | 
 --------------------------|--------------|

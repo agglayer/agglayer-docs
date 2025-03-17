@@ -3,14 +3,6 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
-    inputs:
-      environment:
-        required: false
-        type: choice
-        description: "Select the environment to deploy to (optional for pushes)"
-        options:
-          - prod
 
 permissions:
   contents: read
@@ -21,4 +13,3 @@ jobs:
     uses: 0xPolygon/pipelines/.github/workflows/gcp_pipeline_release_image.yaml@main
     with:
       image_name: agglayer-docs
-      environment: ${{ inputs.environment || 'dev' }}

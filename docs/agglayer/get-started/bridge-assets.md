@@ -95,6 +95,7 @@ In this step, you will initiate a cross-chain asset transfer from the Sepolia te
 **Script Walkthrough: `bridge_asset.js`**
 ```javascript
 const { getLxLyClient, tokens } = require('./utils/utils_lxly');
+const config = require("./config");
 
 const execute = async () => {
     // Initialize the lxly client

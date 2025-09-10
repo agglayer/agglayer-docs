@@ -2,22 +2,26 @@
 
 Here's a list of chains connected to the alpha version of the Agglayer:
 
-| Chain partner           | Chain ID  | 
---------------------------|--------------|
-| Polygon (Internal)      | 2445         | 
-| Orion/Lumia             | 1952959480   | 
-| Silicon                 | 1722641160   | 
-| Hashkey                 | 1304267893   | 
-| Magic                   | 720380884    | 
-| Stavanger               | 50591822     | 
-| Moonveil                | 1093502521   | 
-| Wilderworld             | 1417429182   | 
-| zkSom                   | 1750170424   | 
-| Astar                   | 3776         | 
-| OKX                     | 196          | 
-| Witnesschain            | 1702448187   | 
-| Orion/Lumia (prism)     | 994873017    | 
-| Wirex/pay-chain         | 31415        | 
-| Silicon                 | 2355         | 
-| Ternoa                  | 752025       | 
-| Wilderworld             | 9369         |
+### Testnet
+
+| Chain partner           | Chain ID   |
+| ----------------------- | ---------- |
+| Polygon Cardona (zkEVM) | 2442       |
+| Stavanger               | 50591822   |
+| Moonveil                | 1093502521 |
+| Silicon Testnet         | 1414       |
+| Lumia Beam Testnet      | 2030232745 |
+| Katana Tatara Testnet   | 129399     |
+
+### Mainnet
+
+| Chain partner       | Chain ID  |
+| ------------------- | --------- |
+| Polygon zkEVM       | 1101      |
+| X Layer (OKX)       | 196       |
+| Orion/Lumia (Prism) | 994873017 |
+| Wirex Paychain      | 31415     |
+| Silicon             | 2355      |
+| Ternoa              | 752025    |
+| Pentagon Games      | 2137      |
+| Katana              | 747474    |

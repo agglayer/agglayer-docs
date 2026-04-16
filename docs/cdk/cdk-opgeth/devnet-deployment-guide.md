@@ -28,41 +28,9 @@ export DEPLOYER_PRIVATE_KEY=0x0000000000000000000000000000000000000000
 
 ## Rollup Network Creation
 
-### Step 1: Submit a Request
+### Step 1: Propose the `attachAggchainToAL()` Transaction on Safe Gnosis
 
-To initiate the rollup creation:
-
-1. The **Implementation Provider (IP)** must submit a request to Polygon Labs.
-2. Use the [Polygon Support Portal](https://polygon.atlassian.net/servicedesk/customer/portal/22) to raise a support ticket.
-
-#### Required Parameters
-
-| Parameter              | Description                                                | Example                                   |
-|------------------------|------------------------------------------------------------|-------------------------------------------|
-| Rollup Type            | Type of rollup                                             | `Pessimistic Proofs (PP)`                 |
-| Chain ID               | Unique identifier for your rollup                          | `473`                                     |
-| Admin Address          | Your control address for rollup modifications              | `0xBe46896822BD1d415522F3a5629Fe28447b95563`                            |
-| Sequencer Address      | Used by AggKit, must be under your control                 | `0x0769fcb9ca9369b0494567038E5d1f27f0CBE0aC`                             |
-| Gas Token Address      | Token or zero address                                      | `0x0000000000000000000000000000000000000000`                            |
-| Sequencer URL          | *(Not used for PP)*                                        | `https://...`                                 |
-| Datastream URL         | *(Not used for OP)*                                        | `https://...`                                 |
-| Network Name           | Final network name (non-editable)                          | `bali-36-op`                              |
-
----
-
-### Step 2: Setup by Polygon Labs
-
-Once approved:
-
-- Polygon Labs provisions your Rollup.
-- A transaction is recorded (e.g., [example](https://sepolia.etherscan.io/tx/0x111618eedb16b416aef393db6dd2d73d5a190dd5e15bdaa704473ba89a497f92)).
-
-You will receive:
-
-- `combined.json`: Core deployment details
-- `genesis-base.json`: Needed for genesis generation
-
-> 💡 **Secure these files.** They are required for further deployment steps.
+Follow [these guidelines](https://github.com/agglayer/runbooks/blob/main/operations/initiate-chain-integration-agglayer.md#part-1-chain-integration-process).
 
 ---
 

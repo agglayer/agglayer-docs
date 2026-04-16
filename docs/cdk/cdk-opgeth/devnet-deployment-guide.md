@@ -28,7 +28,7 @@ export DEPLOYER_PRIVATE_KEY=0x0000000000000000000000000000000000000000
 
 ## Rollup Network Creation
 
-### Step 1: Propose the `attachAggchainToAL()` Transaction on Safe Gnosis
+### Step 1: Propose the `attachAggchainToAL()` Transaction on Gnosis Safe
 
 Follow [these guidelines](https://github.com/agglayer/runbooks/blob/main/operations/initiate-chain-integration-agglayer.md#part-1-chain-integration-process).
 

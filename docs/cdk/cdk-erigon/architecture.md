@@ -1,10 +1,24 @@
 This section describes the core components and flow of the `cdk-erigon` configuration across its three main deployment modes: **sovereign**, **validium**, and **zkRollup**. These configurations vary primarily in data availability and prover setup, while sharing the same core Erigon-based client and bridge infrastructure.
 
+## Configuration Overview
+
+| Mode | Verifier Type | Smart Contract Consensus | Proof System |
+|------|---------------|--------------------------|--------------|
+| `cdk-erigon-zkrollup` | State Transition | `PolygonZkEVMEtrog` | [FEP](/agglayer/core-concepts/state-transition-proof/) (Hermez) |
+| `cdk-erigon-validium` | State Transition | `PolygonValidiumEtrog` | [FEP](/agglayer/core-concepts/state-transition-proof/) (Hermez) |
+| `cdk-erigon-sovereign` | ALGateway | `AggchainECDSAMultisig` | [Pessimistic Proof](/agglayer/core-concepts/pessimistic-proof/) (SP1) |
+
 ## `cdk-erigon-sovereign`
+
+> Version: **v0.35-ECDSA**
+
 ![CDK-erigon-sovereign](img/pessimistic-proofs-diagram.jpg)
 
 | **Component** | **Description / Link** |
 | --- | --- |
+| **Verifier Type** | ALGateway |
+| **SC Consensus** | `AggchainECDSAMultisig` |
+| **Proof System** | [Pessimistic Proof](/agglayer/core-concepts/pessimistic-proof/) via SP1 zkVM |
 | **Execution + Consensus Layer** | [CDK-Erigon](https://github.com/0xPolygonHermez/cdk-erigon) — Combined Ethereum client for execution and consensus |
 | **AggKit - Oracle** | [AggOracle](https://github.com/agglayer/aggkit) — Updates global Ethereum Root (GER) |
 | **AggKit - Sender** | Sends certificates to Agglayer |
@@ -15,30 +29,38 @@ This section describes the core components and flow of the `cdk-erigon` configur
 |  | Agglayer Prover — Generates validity proofs |
 
 ## `cdk-erigon-zkrollup`
+
 ![CDK-erigon-zkrollup](img/full-execution-proofs-diagram.jpg) 
 
 | **Component** | **Description / Link** |
 | --- | --- |
+| **Verifier Type** | State Transition |
+| **SC Consensus** | `PolygonZkEVMEtrog` |
+| **Proof System** | [FEP](/agglayer/core-concepts/state-transition-proof/) via Hermez Prover |
 | **Execution + Consensus Layer** | [CDK-Erigon](https://github.com/0xPolygonHermez/cdk-erigon) |
 | **Internal CDK Infrastructure** | Sequence Sender and Aggregator |
 | **Bridge API** | [zkEVM Bridge Service](https://github.com/0xPolygonHermez/zkevm-bridge-service) |
 | **Ethereum Bridge Contracts** | [zkEVM Contracts](https://github.com/0xPolygonHermez/zkevm-contracts) |
 | **Data Availability Layer** | On-chain data submitted directly to Ethereum (no off-chain DAC) |
 | **Agglayer Network** | [Agglayer](https://github.com/agglayer/agglayer), Agglayer Node |
-| **Prover Network** | [Hermez Prover](https://github.com/0xPolygonHermez/zkevm-prover) — zk-SNARK based proof generator |
+| **Prover Network** | [Hermez Prover](https://github.com/0xPolygonHermez/zkevm-prover) — FEP (Full Execution Proof) generator |
 
 ## `cdk-erigon-validium`
+
 > 💡 **Note:** This mode shares the same architecture as `zkrollup`, but uses an alternative data availability (DA) layer.
 
 | **Component** | **Description / Link** |
 | --- | --- |
+| **Verifier Type** | State Transition |
+| **SC Consensus** | `PolygonValidiumEtrog` |
+| **Proof System** | [FEP](/agglayer/core-concepts/state-transition-proof/) via Hermez Prover |
 | **Execution + Consensus Layer** | [CDK-Erigon](https://github.com/0xPolygonHermez/cdk-erigon) |
 | **Internal CDK Infrastructure** | Sequence Sender and Aggregator — build and send transaction batches |
 | **Bridge API** | [zkEVM Bridge Service](https://github.com/0xPolygonHermez/zkevm-bridge-service) |
 | **Ethereum Bridge Contracts** | [zkEVM Contracts](https://github.com/0xPolygonHermez/zkevm-contracts) |
 | **Data Availability Layer** | [Custom DAC](https://github.com/0xPolygon/cdk-data-availability) — Off-chain data availability committee |
 | **Agglayer Network** | [Agglayer](https://github.com/agglayer/agglayer), Agglayer Node |
-| **Prover Network** | [Hermez Prover](https://github.com/0xPolygonHermez/zkevm-prover) — zk-SNARK based proof generator |
+| **Prover Network** | [Hermez Prover](https://github.com/0xPolygonHermez/zkevm-prover) — FEP (Full Execution Proof) generator |
 
 ### User Data Flow
 
